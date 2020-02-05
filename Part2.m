@@ -1,15 +1,15 @@
-phi = @(z) z^2 -.3-.4*1i; %Anonymously Define function whose fixed points we seek
-fixpt1 = sqrt(.3 + .4*1i); %The fixed points
-fixpt2 = -sqrt(.3 + .4*1i);
+phi = @(z) z^2 - 1.5; %Anonymously Define function whose fixed points we seek
+fixpt1 = sqrt(1.5); %The fixed points
+fixpt2 = -sqrt(1.5);
 
 colormap([1 0 0; 1 1 1]); %Points numbered 1 (inside) will be colored red
                           %Those numbered 2 (outside) will be white
-M = 2*ones(1266,1266);      %Initialize array of point colors 2 (white)
+M = 2*ones(247,247);    %Initialize array of point colors 2 (white)
 
-for j = 1:1266             %Try initial values with imaginary parts
-    y = -.6325 + (j-1)*.01; % between -1 and 1
-    for i = 1:1266         % and with real parts 
-        x = -.6325 + (i-1)*.01; % between -1 and 1
+for j = 1:247             %Try initial values with imaginary parts
+    y = -1.23 + (j-1)*.01; % between -1 and 1
+    for i = 1:247         % and with real parts 
+        x = -1.23 + (i-1)*.01; % between -1 and 1
         z = x + 1i*y;
         zk = z;
         iflag1 = 0;    %iflag 1 & 2 count the number of iterations
